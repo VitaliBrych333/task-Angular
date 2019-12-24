@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  border-width: 3px;
+  border-style: solid;
+  margin-top:8px;
+  width: 90%;
+}
+
+p {
+  margin: 10px 20px;
+}
+
+.content div:first-child {
+  flex-grow: 1;
+}
+
+button {
+  width: 70px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+.content div:first-child p {
+  font-size: 22px;
+}
+
+.content div:nth-child(2), .content div:nth-child(3) {
+  font-style: italic;
+  font-size: 20px
+}
+
+.top-raited {
+  background-color: darkgoldenrod;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="content" [appBorder]="coursesItem.date" [ngClass]="{'top-raited': coursesItem.topRated }">
+      <div><p>{{coursesItem.name | uppercase}}<span *ngIf="coursesItem.topRated">&#9733;</span></p></div>
+      <div><p>{{coursesItem.length | duration}}</p></div>
+      <div><p>{{coursesItem.date | date:"dd.MM.yyyy"}}</p></div>
+      <p>{{coursesItem.description}}</p>
+  </div>
+  <div class="button">
+      <button [routerLink]="['/courses', coursesItem.id]">Edit</button>
+      <button (click)="delete(coursesItem.id)">Delete</button>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+.container {
+  width: 90%;
+  margin: 30px auto;
+  font-size: 20px;
+}
+
+label, input, span {
+  display: block;
+}
+
+input {
+  width: 100%;
+}
+
+input[type=date], input[type=number] {
+  width: 20%;
+  min-width: 125px;
+}
+
+input[type=number], input[type=number] + p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input {
+  height: 20px;
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: cadetblue;
+}
+
+a {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+}
+
+input.ng-touched.ng-invalid {
+  border:solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+  border:solid green 2px;
+}
+
+.progControlSelect2 {
+  width: 350px;
+}

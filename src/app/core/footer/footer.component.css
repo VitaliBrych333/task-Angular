@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  height: 30px;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: gray;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 16px;
+}

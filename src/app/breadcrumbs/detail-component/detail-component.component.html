@@ -1,0 +1,37 @@
+<div class="container">
+  <div>
+    <a [routerLink]="['/courses']">Courses/</a>
+    <a>{{title}}</a>
+  </div>
+  <form [formGroup]="courseItems">
+    <label>
+      Title:
+      <span *ngIf="!courseItems.controls.name.valid && courseItems.controls.name.touched">Invalid format</span>
+      <input type="text" formControlName="name" [(ngModel)]="title">
+    </label>
+    <label>
+      Description:
+      <span *ngIf="!courseItems.controls.description.valid && courseItems.controls.description.touched">Invalid format</span>
+      <input type="text" formControlName="description">
+      <!-- <textarea>{{courseItems.description}}</textarea> -->
+    </label>
+    <label>
+      Date:
+      <span *ngIf="!courseItems.controls.date.valid && courseItems.controls.date.touched">Invalid format</span>
+      <input type="date" formControlName="date">
+    </label>
+    <label>
+      <span>Duration:</span>
+      <span *ngIf="!courseItems.controls.length.valid && courseItems.controls.length.touched">Invalid format</span>
+      <input type="number" formControlName="length" [(ngModel)]="time">
+      <p>{{time | duration }}</p>
+    </label>
+    <label>
+      Authors:
+      <span *ngIf="!courseItems.controls.author.valid && courseItems.controls.author.touched">Invalid format</span>
+      <input type="text" formControlName="author">
+    </label>
+    <button (click)="save()" [disabled]="!courseItems.valid">Save</button>
+    <button (click)="cancel()">Cancel</button>
+  </form>
+</div>

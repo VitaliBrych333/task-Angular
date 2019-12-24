@@ -1,0 +1,16 @@
+
+<div>
+  <a [routerLink]="['/courses']">Courses</a>
+  <div class="search">
+    <input type="text" (keyup)="showSearch(valueSearch)" [formControl]="valueSearch" placeholder="Name, fragment or date"/>
+    <!-- <button (click)="showSearch(valueSearch)">Search</button> -->
+    <button [routerLink]="['/courses/new']">Add course</button>
+  </div>
+  <app-courses-item *ngFor="let item of courseItems| orderBy: date " [coursesItem]="item" (deleteItem)="deleteItem($event)"></app-courses-item>
+  <div *ngIf="stateFieldSearch">
+    <p>No data, feel free to add new course</p>
+  </div>
+  <div class="loading">
+    <button (click)="showOthers(courseItems.length + 5)">Load more</button>
+  </div>
+</div>

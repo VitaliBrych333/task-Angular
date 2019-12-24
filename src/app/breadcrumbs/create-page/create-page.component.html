@@ -1,0 +1,30 @@
+<form>
+  <label>
+    Title:
+    <span *ngIf="!valueTitle.valid && valueTitle.touched">Invalid format</span>
+    <input type="text" [formControl]="valueTitle">
+  </label>
+  <label>
+    Description:
+    <span *ngIf="!valueDescription.valid && valueDescription.touched">Invalid format</span>
+    <input type="text" [formControl]="valueDescription">
+  </label>
+  <label>
+    Date:
+    <span *ngIf="!myDate.valid && myDate.touched">Invalid format</span>
+    <input type="text" class="date" [formControl]="myDate" placeholder="dd/mm/yyyy">
+  </label>
+  <label>
+    <span>Duration:</span>
+    <span *ngIf="!valueDuration.valid && valueDuration.touched">Invalid format</span>
+    <input type="text" class="length" [formControl]="valueDuration">
+    <p *ngIf="valueDuration.valid">{{valueDuration.value | duration }}</p>
+  </label>
+  <label>
+    Authors:
+    <span *ngIf="!valueSelect.valid && valueSelect.dirty">Invalid format</span>
+    <app-ng-select [formControl]="valueSelect" [valueSelect]="valueSelect"></app-ng-select>
+  </label>
+  <button (click)="save()" [disabled]="!myDate.valid || !valueDescription.valid || !valueTitle.valid || !valueDuration.valid || !valueSelect.valid">Save</button>
+  <button (click)="cancel()">Cancel</button>
+</form>

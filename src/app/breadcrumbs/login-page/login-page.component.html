@@ -1,0 +1,18 @@
+
+<form [formGroup]="user">
+  <div class="window">
+    <p>Login</p>
+    <div>
+      <label>
+        Login *Required:
+        <input type="text" formControlName="login">
+        <span *ngIf="!user.controls.login.valid">Already exist</span>
+      </label>
+      <label>
+        Password *Required:
+        <input type="password" formControlName="password">
+      </label>
+    </div>
+    <button (click)="enter()" [disabled]="!user.valid">Login</button>
+  </div>
+</form>

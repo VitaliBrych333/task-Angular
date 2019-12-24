@@ -1,0 +1,9 @@
+<div class ="container" ngDefaultControl [formControl]="valueSelect">
+  <ng-select  [multiple]="true"
+              [items]="items"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              placeholder="Choose the author"
+              [active]="active"
+              ></ng-select>
+</div>

@@ -1,0 +1,48 @@
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.window {
+  position: absolute;
+  top: 40%;
+  width: 300px;
+  border: 2px solid rgb(107, 107, 161);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+}
+
+input {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+p {
+  font-size: 24px;
+  border-bottom: 2px solid black;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: cadetblue;
+}
+
+
